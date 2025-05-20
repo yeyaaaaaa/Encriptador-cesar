@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+@{
+    
+}
+
+<div class="row text-center py-5">
+    <div class="col-md-6 col-sm-12 border-end border-md-0 ">
+        <h1 class="display-4 mb-3">Encriptar</h1>
+        <form method="post">
+            <div class="mb-3 text-start">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" asp-for="Remitente" required>
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label">Mensaje Secreto</label>
+                <textarea class="form-control" asp-for="Mensaje" rows="3" required></textarea>
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label">Código (Clave de cifrado)</label>
+                <input type="number" class="form-control" asp-for="Codigo" min="1" max="25" required>
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label">Fecha</label>
+                <input type="date" class="form-control" asp-for="Fecha" required>
+            </div>
+            <button class="btn btn-primary mb-5" type="submit" asp-page-handler="GuardarXML">Guardar Mensaje</button>
+        </form>
+    </div>
+
+    <div class="col-md-6 col-sm-12 d-flex flex-column align-items-center">
+        <h1 class="display-4 mb-3">Descifrar</h1>
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3 text-start">
+                <label class="form-label">Cargar mensaje XML</label>
+                <input type="file" class="form-control" asp-for="Archivo" required>
+            </div>
+            <button class="btn btn-secondary mb-5" type="submit" asp-page-handler="CargarXML">Descifrar Mensaje</button>
+        </form>
+
+        @if (TempData["MensajeDescifrado"] != null)
+        {
+            <div class="alert alert-success mt-3">
+                Mensaje Descifrado: @Html.Raw(TempData["MensajeDescifrado"])
+            </div>
+        }
+    </div>
+</div>
