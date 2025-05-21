@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("encriptador")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+685532c7ee767675f53c0351c99d17d506d892be")]
 [assembly: System.Reflection.AssemblyProductAttribute("encriptador")]
 [assembly: System.Reflection.AssemblyTitleAttribute("encriptador")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

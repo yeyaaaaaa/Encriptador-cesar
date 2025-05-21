@@ -16,13 +16,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\encriptador.mvztl5jhor.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HszGedFG9NCuHh/ZFUSReqkKBI1G4t1RuZDdhhsEjNA="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1129"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HszGedFG9NCuHh/ZFUSReqkKBI1G4t1RuZDdhhsEjNA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 15 May 2025 02:07:06 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1129"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HszGedFG9NCuHh/ZFUSReqkKBI1G4t1RuZDdhhsEjNA=\u0022"},{"Name":"Last-Modified","Value":"Wed, 21 May 2025 00:29:11 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/encriptador/encriptador.mvztl5jhor.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\encriptador.mvztl5jhor.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mvztl5jhor"},{"Name":"integrity","Value":"sha256-HszGedFG9NCuHh/ZFUSReqkKBI1G4t1RuZDdhhsEjNA="},{"Name":"label","Value":"_content/encriptador/encriptador.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1129"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HszGedFG9NCuHh/ZFUSReqkKBI1G4t1RuZDdhhsEjNA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 15 May 2025 02:07:06 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1129"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HszGedFG9NCuHh/ZFUSReqkKBI1G4t1RuZDdhhsEjNA=\u0022"},{"Name":"Last-Modified","Value":"Wed, 21 May 2025 00:29:11 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/encriptador/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>

@@ -57,7 +57,7 @@ namespace encriptador.Pages
 
         public IActionResult OnPostGuardarXML()
         {
-            string mensajeCifrado = CifrarCesar(Mensaje, Codigo);
+            string mensajeCifrado = CifrarCesar(Mensaje, 3);
 
             var mensajeSecreto = new MensajeSecreto
             {
@@ -69,16 +69,24 @@ namespace encriptador.Pages
 
             var serializer = new XmlSerializer(typeof(MensajeSecreto));
 
-            var memoryStream = new MemoryStream();
+            string carpetaMensajes = Path.Combine(Directory.GetCurrentDirectory(), "Mensajes");
 
-            var writer = new StreamWriter(memoryStream, Encoding.UTF8);
-            serializer.Serialize(writer, mensajeSecreto);
-            writer.Flush();
-            memoryStream.Position = 0;
+            if (!Directory.Exists(carpetaMensajes))
+            {
+                Directory.CreateDirectory(carpetaMensajes);
+            }
 
             string nombreArchivo = $"MensajeSecreto_{Remitente}.xml";
+            string rutaCompleta = Path.Combine(carpetaMensajes, nombreArchivo);
 
-            return File(memoryStream, "application/xml", nombreArchivo);
+            using (var fileStream = new FileStream(rutaCompleta, FileMode.Create))
+            {
+                serializer.Serialize(fileStream, mensajeSecreto);
+            }
+
+            TempData["Mensaje"] = "Mensaje secreto guardado correctamente.";
+            return RedirectToPage(); 
+            
         }
 
         public IActionResult OnPostCargarXML()
@@ -90,7 +98,7 @@ namespace encriptador.Pages
                     XmlSerializer serializer = new XmlSerializer(typeof(MensajeSecreto));
                     var mensajeSecreto = (MensajeSecreto)serializer.Deserialize(stream);
 
-                    string mensajeDescifrado = DescifrarCesar(mensajeSecreto.Mensaje, mensajeSecreto.Codigo);
+                    string mensajeDescifrado = DescifrarCesar(mensajeSecreto.Mensaje,3);
 
                     TempData["MensajeDescifrado"] = $"Remitente: {mensajeSecreto.Remitente}<br/>" +
                                                     $"Mensaje: {mensajeDescifrado}<br/>" +
